@@ -1,0 +1,45 @@
+Javascript to do list speedrun 
+
+technologies:
+HTML
+CSS
+Javascript DOM
+Bootstrap
+
+
+yang dibutuhkan:
+
+// element to do list
+element input kegiatan user.
+tombol submit kegiatan user.
+element tampilkan kegiatan user. 
+tombol untuk menghapus kegiatan user yang sudah selesai pada masing-masing element kegiatan/todolist.
+pop-op alert apakah yakin ingin menghapus kegiatan.
+
+//element judul todolist
+input judul todolist.
+element judul todolist.
+
+
+// algorithm element kegiatan/todolist
+1.user menginput kegiatan
+2.user mensubmit kegiatan
+3.kegiatan hasil input user pada kolom input kegiatan akan ditampilkan pada element kegiatan.
+4.element kegiatan akan menampilkan status apakah kegiatan sudah selesai atau kegiatan belum selesai
+5.apabil user mengklik kegiatan satu kali maka kegiatan telah selesai.
+6.apabila user mengklik kegiatan  satu kali kedua kalinya status kegiatan akan berubah menjadi belum dilakukan.
+7.apabila user double klik element kegiatan maka kegiatan akan muncul pop-up alert, menayakan apakah user yakin ingin menghapus kegiatan?.
+8.apabila pada pop-up alert user mengklik ya maka element kegiatan yang dipilih akan terhapus.
+9.apabila pada pop-upp alert user mengklik tidak maka element kegiatan yang dipilih tidak jadi terhapus.
+
+// algorithm element judul todolist
+1.user menginput judul kegiatan 
+2.user mengklik tombol ok
+3.value input user dari element input kegiatan akan ditampilkan pada element judul.
+
+
+
+
+
+
+
