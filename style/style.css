@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 .glass-bg {
   background: rgba(255, 255, 255, 0.1);
-  -webkit-box-shadow: 0 5px 20px 0 rgba(31, 38, 135, 0.37);
-          box-shadow: 0 5px 20px 0 rgba(31, 38, 135, 0.37);
+  -webkit-box-shadow: 0 0px 0px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 0px 0px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   border-radius: 10px;
@@ -45,8 +45,8 @@ ol li {
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
