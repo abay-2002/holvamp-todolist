@@ -8,12 +8,11 @@
 
 body {
     min-height: 100vh;
-    background: #8800dd;
-    background: -moz-linear-gradient(-45deg,  #8800dd 0%, #af00ff 0%, #ffffff 94%);
-    background: -webkit-linear-gradient(-45deg,  #8800dd 0%,#af00ff 0%,#ffffff 94%);
-    background: linear-gradient(135deg,  #8800dd 0%,#af00ff 0%,#ffffff 94%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8800dd', endColorstr='#ffffff',GradientType=1 );
-    
+    // background: #8800dd;
+    // background: -moz-linear-gradient(-45deg,  #8800dd 0%, #af00ff 0%, #ffffff 94%);
+    // background: -webkit-linear-gradient(-45deg,  #8800dd 0%,#af00ff 0%,#ffffff 94%);
+    // background: linear-gradient(135deg,  #8800dd 0%,#af00ff 0%,#ffffff 94%);
+    // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8800dd', endColorstr='#ffffff',GradientType=1 );
 }
 
 .wrapper-flex {

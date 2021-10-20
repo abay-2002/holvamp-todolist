@@ -1,10 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 .glass-bg {
-  background: rgba(255, 255, 255, 0.1);
-  -webkit-box-shadow: 0 0px 0px 0 rgba(31, 38, 135, 0.37);
-          box-shadow: 0 0px 0px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-radius: 10px;
 }
 
@@ -14,9 +12,6 @@
 
 body {
   min-height: 100vh;
-  background: #8800dd;
-  background: linear-gradient(135deg, #8800dd 0%, #af00ff 0%, #ffffff 94%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8800dd', endColorstr='#ffffff',GradientType=1 );
 }
 
 .wrapper-flex {
