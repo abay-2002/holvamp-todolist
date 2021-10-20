@@ -1,4 +1,5 @@
 @import 'glass-bg';
+@import 'footer';
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 * {
@@ -8,46 +9,44 @@
 
 body {
     min-height: 100vh;
-    // background: #8800dd;
-    // background: -moz-linear-gradient(-45deg,  #8800dd 0%, #af00ff 0%, #ffffff 94%);
-    // background: -webkit-linear-gradient(-45deg,  #8800dd 0%,#af00ff 0%,#ffffff 94%);
-    // background: linear-gradient(135deg,  #8800dd 0%,#af00ff 0%,#ffffff 94%);
-    // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8800dd', endColorstr='#ffffff',GradientType=1 );
 }
 
-.wrapper-flex {
+ul, li {
+    padding: 0;
+    list-style-type: none !important;
+}
+
+// COSTUM-WRAPPER-LAYOUT-COL
+.costum-wrapper-flex-col {
     display: flex;
     flex-direction: column;
     width: 100%;
     justify-content: center;
 }
 
-// COSTUM-FLEX-LAYOUT
-.costum-flex-layout {
+// COSTUM-GRID-LAYOUT-1FR
+.costum-grid-layout {
     display: grid;
     grid-template-columns: 1fr;
     text-align: center;
 }
 
-ol li {
+// COSTUM-LIST-LAYOUT
+
+
+ul li {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    text-align: center;
+    grid-gap: 6px;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
 }
 
-ol li button,span {
-    width: 50%;
+ul li button, ul li span {
+    width: 100%;
     margin: auto;
     overflow: hidden;
 }
-
-
-// FOOTER
-footer {
-    position: sticky;
-    top: 100%;
-    box-shadow: none !important;
-}
-

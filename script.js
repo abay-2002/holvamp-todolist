@@ -18,11 +18,11 @@ $('#submit-kegiatan').on('click',function(){
     }else{   
         idAwal += 1;
         elhLiKegiatan = `
-        <li id="${idAwal}" class="rounded-3 mt-2 mb-2">
+          <li id="${idAwal}" class="rounded-3 mt-3 mb-3 mx-auto">
             <span class="text-dark rounded-3 p-1 bg-light">${inputKegiatan}</span>
             <button id="status-${idAwal}" type="button" class="btn btn-primary p-1">Belum</button>
             <button id="delete-${idAwal}" type="button" class="btn btn-danger p-1">Hapus</button>
-        </li>
+          </li>
         `;        
         $('#kegiatan-wrapper').append(elhLiKegiatan);
         $('input[type="text"]').val("");  

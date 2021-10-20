@@ -15,17 +15,17 @@
     <title>To do list</title>
   </head>
   <body class="bg-dark">
-    <div class="container wrapper-flex">
-        <!-- tema Todolist -->
-        <div class="costum-flex-layout rounded-3 p-2 pb-0 mt-4 mb-2 glass-bg">
+    <div class="container costum-wrapper-flex-col">
+        <!-- tema Todolist --> 
+        <div class="costum-grid-layout rounded-3 p-2 pb-0 mt-4 mb-2 glass-bg">
           <!-- Element tema Todolist -->
           <h1 id="element-tema-todolist" class="text-light">Tema kegiatan</h1>
         </div>
 
-        <div class="costum-flex-layout rounded-3 p-3 mt-2 mb-2 glass-bg">
+        <div class="costum-grid-layout rounded-3 p-3 mt-2 mb-2 glass-bg">
             <!-- Input tema Todolist -->
             <div class="input-group mb-2">
-                <span class="input-group-text bg-white" id="basic-addon1">Tema</span>
+                <span class="input-group-text bg-white" id="basic-addon1" >Tema</span>
                 <input id="input-tema-todolist" type="text" class="form-control" placeholder="Liburan" aria-label="Username" aria-describedby="basic-addon1">
             </div>
             <!-- Button tema -->
@@ -33,7 +33,7 @@
         </div>
         
         <!-- Input Todolist -->
-        <div class="costum-flex-layout rounded-3 p-3 mt-2 mb-2 glass-bg">
+        <div class="costum-grid-layout rounded-3 p-3 mt-2 mb-2 glass-bg">
           <!-- Element list Todolist -->
           <div class="input-group mb-2">
             <span class="input-group-text bg-white" id="basic-addon1">Kegiatan</span>
@@ -43,13 +43,9 @@
           <button id="submit-kegiatan" type="button" class="btn btn-primary">Tambah</button>
         </div>
 
-          <ol id="kegiatan-wrapper" class="rounded-3 mt-2 mb-2 glass-bg">
-            <!-- <li class="rounded-3 mt-2 mb-2">
-              <span class="text-dark rounded-3 p-1 bg-light">Tidur</span>
-              <button type="button" class="btn btn-success p-1">Selesai</button>
-              <button type="button" class="btn btn-success p-1">Selesai</button>
-            </li> -->
-          </ol>
+        <ul id="kegiatan-wrapper" class="rounded-3 px-3 mt-2 mb-2 glass-bg">
+          
+        </ul>
         
     </div>
 
