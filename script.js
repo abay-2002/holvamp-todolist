@@ -9,7 +9,7 @@ $('#submit-tema').on('click',function(){
     }
 });
 
-idAwal = 0;
+let idAwal = 0;
 $('#submit-kegiatan').on('click',function(){
     // ambil element TEMA
     let inputKegiatan = $('#input-kegiatan').val();
@@ -18,7 +18,7 @@ $('#submit-kegiatan').on('click',function(){
     }else{   
         idAwal += 1;
         elhLiKegiatan = `
-          <li id="${idAwal}" class="rounded-3 mt-3 mb-3 mx-auto">
+          <li id="${idAwal}" class="rounded-3 mt-3 mb-3 mx-auto save">
             <span class="text-dark rounded-3 p-1 bg-light">${inputKegiatan}</span>
             <button id="status-${idAwal}" type="button" class="btn btn-primary p-1">Belum</button>
             <button id="delete-${idAwal}" type="button" class="btn btn-danger p-1">Hapus</button>
@@ -48,24 +48,44 @@ $('#submit-kegiatan').on('click',function(){
             }else{
                 return 0;
             }
-            // // ambil id ol
-            // let ol = buttondelete.parent().parent();
-            // let olId = ol.attr('id');
-            // console.log(olId);
-
-            // // ambil id li
-            // let li = buttondelete.parent();
-            // let liId = li.attr('id');
-            // console.log(liId);
-
-            // $(`${ol} ${li}`).remove();
+           
         });
     }
 });
 
-let container = $('.container');
-console.log(container);
-// let buttonStatus = $(`#status-${idAwal}`).each(function() {
-//     console.log($(this));
-// })
+// save kegiatan
+// window.onload = function () {
 
+//     document.getElementById("download").addEventListener("click", () => {
+//         let save = document.getElementsByClassName('save');
+//             for(i=0; i<save.length; i++){
+//                 kegiatan = this.document.getElementsByClassName("save")[i];
+//             }
+//             console.log(kegiatan);
+//             console.log(window);
+//             var opt = {
+//                 margin: 1,
+//                 filename: 'myfile.pdf',
+//                 image: { type: 'jpeg', quality: 0.98 },
+//                 html2canvas: { scale: 2 },
+//                 jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+//             };
+//             html2pdf().from(kegiatan).set(opt).save();
+//         })
+// }
+window.onload = function () {
+    document.getElementById("download").addEventListener("click", () => {
+            const kegiatan = this.document.getElementById("kegiatan");
+            console.log(kegiatan);
+            console.log(window);
+            var opt = {
+                // margin: 1,
+                filename: 'todolist-byabay.pdf',
+                image: { type: 'jpeg', quality: 1 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+            html2pdf().from(kegiatan).set(opt).save();
+        })
+}
+// cr: https://github.com/eKoopmans/html2pdf.js thanks dude cool repo ;)
