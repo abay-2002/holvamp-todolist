@@ -13,7 +13,7 @@ $('#submit-tema').on('click',function(){
 let idAwal = 0;
 $('#submit-kegiatan').on('click',function(){
     // ambil element TEMA
-    let inputKegiatan = $('#input-kegiatan').val();
+    var inputKegiatan = $('#input-kegiatan').val();
     if(inputKegiatan == 0){
         alert('oops.. masukan kegiatan :D');
     }else{   
@@ -27,7 +27,7 @@ $('#submit-kegiatan').on('click',function(){
         `;        
         $('#kegiatan-wrapper').append(elhLiKegiatan);
         $('input[type="text"]').val("");  
-        
+
         // button status per id
         let buttonStatus = $(`#status-${idAwal}`);
         buttonStatus.on('click',function(){
@@ -48,28 +48,32 @@ $('#submit-kegiatan').on('click',function(){
                 $(this).parent().remove();
             }else{
                 return 0;
-            }
-           
+            }            
         });
+
+
+
     }
 });
 
 
+// save   
 window.onload = function () {
     document.getElementById("download").addEventListener("click", () => {
-            const kegiatan = this.document.getElementById("kegiatan");
-            // console.log(kegiatan);
-            // console.log(window);
-            var opt = {
-                // margin: 1,
-                filename: 'todolist-byabay.pdf',
-                image: { type: 'jpeg', quality: 1 },
-                html2canvas: { scale: 2 },
-                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-            };
-            
-            html2pdf().from(kegiatan).set(opt).save();
-        })
+        const kegiatan = this.document.getElementById("kegiatan");
+        // console.log(kegiatan);
+        // console.log(window);
+        var opt = {
+            // margin: 1,
+            filename: 'todolist-byabay.pdf',
+            image: { type: 'jpeg', quality: 1 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+        };                
+        html2pdf().from(kegiatan).set(opt).save();
+    })
 }
 // cr: https://github.com/eKoopmans/html2pdf.js thanks dude cool repo ;)
+
+
 }
