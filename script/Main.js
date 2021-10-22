@@ -1,3 +1,4 @@
+export default function Main(){
 $('#submit-tema').on('click',function(){
     // ambil element TEMA
     let inputTema = $('#input-tema-todolist').val();
@@ -17,11 +18,11 @@ $('#submit-kegiatan').on('click',function(){
         alert('oops.. masukan kegiatan :D');
     }else{   
         idAwal += 1;
-        elhLiKegiatan = `
-          <li id="${idAwal}" class="rounded-3 mt-3 mb-3 mx-auto save">
+        let elhLiKegiatan = `
+          <li id="${idAwal}" class="rounded-3 mt-3 mb-3 mx-auto">
             <span class="text-dark rounded-3 p-1 bg-light">${inputKegiatan}</span>
             <button id="status-${idAwal}" type="button" class="btn btn-primary p-1">Belum</button>
-            <button id="delete-${idAwal}" type="button" class="btn btn-danger p-1">Hapus</button>
+            <button id="delete-${idAwal}" type="button" class="btn btn-danger p-1" data-html2canvas-ignore="true">Hapus</button>
           </li>
         `;        
         $('#kegiatan-wrapper').append(elhLiKegiatan);
@@ -53,31 +54,12 @@ $('#submit-kegiatan').on('click',function(){
     }
 });
 
-// save kegiatan
-// window.onload = function () {
 
-//     document.getElementById("download").addEventListener("click", () => {
-//         let save = document.getElementsByClassName('save');
-//             for(i=0; i<save.length; i++){
-//                 kegiatan = this.document.getElementsByClassName("save")[i];
-//             }
-//             console.log(kegiatan);
-//             console.log(window);
-//             var opt = {
-//                 margin: 1,
-//                 filename: 'myfile.pdf',
-//                 image: { type: 'jpeg', quality: 0.98 },
-//                 html2canvas: { scale: 2 },
-//                 jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-//             };
-//             html2pdf().from(kegiatan).set(opt).save();
-//         })
-// }
 window.onload = function () {
     document.getElementById("download").addEventListener("click", () => {
             const kegiatan = this.document.getElementById("kegiatan");
-            console.log(kegiatan);
-            console.log(window);
+            // console.log(kegiatan);
+            // console.log(window);
             var opt = {
                 // margin: 1,
                 filename: 'todolist-byabay.pdf',
@@ -85,7 +67,9 @@ window.onload = function () {
                 html2canvas: { scale: 2 },
                 jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
             };
+            
             html2pdf().from(kegiatan).set(opt).save();
         })
 }
 // cr: https://github.com/eKoopmans/html2pdf.js thanks dude cool repo ;)
+}
